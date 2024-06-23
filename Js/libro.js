@@ -15,19 +15,22 @@ class Libro{
 
 
 
-let libro1 = Libro(`El principito`, `Antoine de Saint-Exupéry`, 1943, `Literatura infantil`);
-let libro2 = Libro(`Rayuela`, `Julio Cortázar`, 1963, `Ficción contemporánea`);
-let libro3 = Libro(`El Aleph`, `Jorge Luis Borges`, 1945, `cuentos`);
-let biblioteca = {libro1, libro2, libro3};
+let libro1 = new Libro(`El principito`, `Antoine de Saint-Exupéry`, 1943, `Literatura infantil`);
+let libro2 = new Libro(`Rayuela`, `Julio Cortázar`, 1963, `Ficción contemporánea`);
+let libro3 = new Libro(`El Aleph`, `Jorge Luis Borges`, 1945, `cuentos`);
+let biblioteca = [libro1, libro2, libro3];
 
 // implementa una función buscarLibrosPorAutor que reciba como parámetro el nombre de un autor (string) y devuelva un arreglo con los libros escritos por ese autor.
 
 function buscarLibrosPorAutor(autor){
     let librosDeAutor = [];
-    for(let libro in biblioteca){
-        if(libro.autor == autor){
+    for(let libro of biblioteca){
+        if(libro.autor === autor){
             librosDeAutor.push(libro);
         }
     }
     return librosDeAutor;
 }
+
+let librosCortazar = buscarLibrosPorAutor("Julio Cortázar");
+librosCortazar.forEach(libro => console.log(libro.info()));
