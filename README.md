@@ -22,4 +22,4 @@ Implementación de la función añadirLibro(titulo, autor, añoPublicacion, gene
 
 ## Ejecución de Scripts
 
-Para ver todos los ejercicios juntos, puedes abrir el archivo index.html y abrir la consola en el "inspeccionar" de tu naveador (F12)
+Para ver todos los ejercicios [En este enlace](https://julietarutar97.github.io/Js-biblioteca/). Luego de abrirlo dirigite a la consola del inspeccionador (F12);
