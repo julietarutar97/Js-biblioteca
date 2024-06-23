@@ -32,5 +32,21 @@ function buscarLibrosPorAutor(autor){
     return librosDeAutor;
 }
 
+
 let librosCortazar = buscarLibrosPorAutor("Julio Cortázar");
 librosCortazar.forEach(libro => console.log(libro.info()));
+
+
+// implementa una función añadirLibro que reciba como parámetros los datos de un nuevo libro (titulo, autor, añoPublicacion, genero) y lo añada al arreglo biblioteca.
+
+function añadirLibro(titulo, autor, añoPublicacion, genero){
+    let nuevoLibro = new Libro(titulo,autor,añoPublicacion, genero);
+    biblioteca.push(nuevoLibro);
+}
+
+let libroAgregado = añadirLibro(`El hacedor`, `Jorge Luis Borges`, 1960, `poesía`);
+
+biblioteca.forEach(libro => console.log(libro.info()+"\n"));
+
+let librosBorges = buscarLibrosPorAutor(`Jorge Luis Borges`);
+librosBorges.forEach(libro => console.log(libro.info()+"\n"));
