@@ -7,4 +7,12 @@ class Libro{
         this.añoPublicacion = añoPublicacion;
         this.genero =genero;
     }
+
+    info(){
+        return `Titulo ${this.titulo}, autor: ${this.autor}, año de publicación ${this.añoPublicacion}, género: ${this.genero}`;
+    }
 }
+
+
+
+let biblioteca = {}
